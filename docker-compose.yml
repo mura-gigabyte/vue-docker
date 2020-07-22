@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: ./vue
+    container_name: vue-docker
+    ports:
+      - 80:8080
+    volumes:
+      - "./var/www/:/www"
+    working_dir: /www/app
+    tty: true
